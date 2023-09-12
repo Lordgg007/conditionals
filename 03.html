@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User</h1>
+    <input  type='text' id="user"  value="" onclick="">
+
+    <h2>Enter password</h2>
+    <input  type='password' id="pw"  value="">
+    <input type="checkbox" onclick="showpw()">Show Password
+    <br>
+    <br>
+    <button id="myBtn" onclick="CheckPassword(pw)">Login</button>
+    <script>
+        //password detector
+        function CheckPassword(input) { 
+            var passw=  'cheese';
+            var cclol= 'cancel';
+            var user = '_';
+            if(input.value.match(passw) && user !== ("_")) 
+            { 
+                alert('Welcome')
+                return true;
+            }
+            else if (input.value.match(cclol))
+            {
+                alert('canceled')
+                return false;
+            }
+            else
+            {
+                alert('Wrong password')
+                return false;
+            }
+    }
+
+    //hide password
+    function showpw() {
+            var x = document.getElementById("pw");
+            if (x.type === "password") {
+                    x.type = "text";
+            } else {
+                    x.type = "password";
+            }
+    }
+
+    //login page 
+    var uslol = "";
+    if(uslol !== "" && input.value.match(cclol)) {
+        alert("welcome")
+    }
+    </script>
+</body>
+</html>
